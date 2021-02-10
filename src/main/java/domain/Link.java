@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @Data
-public class Link {
+public class Link extends Auditable{
 
     @Id
     @GeneratedValue
@@ -26,5 +26,4 @@ public class Link {
 
     @OneToMany(mappedBy = "link")
     private List<Comment> comments = new ArrayList<>();
-
 }
